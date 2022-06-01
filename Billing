@@ -1,0 +1,25 @@
+public class Billing {
+	
+	private int B_no=27;
+	private int B_amt= 2670;
+	Pet P = new Pet();
+	String P_name =P.getP_name();
+	int P_id = P.getP_id();
+	public String getP_name() {
+		return P_name;
+		
+	}
+	public int getB_no() {
+			return B_no;
+	}
+	public int getB_amt() {
+		return B_amt;
+	}
+	public Pet getP() {
+		return P;
+	}
+	public int getP_id() {
+		return P_id;
+	}
+
+}
