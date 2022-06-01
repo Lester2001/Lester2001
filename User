@@ -1,0 +1,31 @@
+import java.io.* ;
+import java.util.Scanner;
+
+
+public class User {
+	
+	public static void main(String[] args) {
+		System.out.println("Enter the number of your Choice:Input 1 for Receptionist Input 2 for Pet and Input 3 for Veterinarian");
+		 Scanner sc = new Scanner (System.in);
+			int Choice = sc.nextInt();
+			
+			
+				do {
+			switch (Choice) {
+			case 1: Receptionist R = new Receptionist();
+				R.Choice();
+			break;
+			case 2: Pet P = new Pet();
+			 	P.Choice();
+			 	break;
+			case 3:Veterinarian D = new Veterinarian();
+				D.Choice();
+				break;
+			 	
+				
+			}
+				}while (Choice !=4);
+
+		}
+}
+
