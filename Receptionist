@@ -1,0 +1,45 @@
+import java.io.* ;
+import java.util.Scanner;
+
+
+public class Receptionist extends User {
+	
+	private int R_id;
+	private String  R_name;
+	
+	public void Choice () {
+		System.out.println("Enter the number of your choice: 1-GiveAppointments 2-GenerateBill");
+		Scanner sc = new Scanner(System.in);
+		int choice = sc.nextInt();
+		
+		
+			switch (choice) {
+			case 1 : GiveAppointments();
+				break;
+			case 2: GenerateBills();
+				break;
+			case 3: main(null);
+			}
+			
+			
+	}
+		public void GenerateBills() {
+			
+			Billing B = new Billing();
+			int B_no = B.getB_no();
+			String P_name = B.getP_name();
+			int P_id = B.getP_id();
+			int B_amt = B.getB_amt();
+			System.out.println("BillNo:"+B_no +"\n PetID :"+P_id+"\nPetName: "+P_name+"\nBillAmount: Php"+B_amt);
+			}
+		public void GiveAppointments() {	
+			Pet P = new Pet ();
+			String P_name =P.getP_name();
+			int P_id = P.getP_id();
+			Veterinarian D = new Veterinarian() ;
+			int D_id = D.getD_id();
+			String D_name = D.getD_name();
+			System.out.println("\nPetID:"+P_id+"\nPetName: "+P_name+"\nAppointment with Veterinarian \nVeterinarianID: "+D_id+" \nDoctorName : " +D_name);
+			
+		}
+}
