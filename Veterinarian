@@ -1,0 +1,41 @@
+import java.io.* ;
+import java.util.Scanner;
+
+public class Veterinarian extends User {
+	private int D_id = 1218;
+	private String D_name = "Cardo Dalisay";
+	
+	public int getD_id() {
+		return D_id;
+	}
+	
+	public void setD_(int D_id) {
+		this.D_id = D_id;
+	}
+	public String getD_name() {
+		return D_name;
+	}
+	public void setD_name(String D_name) {
+		this.D_name = D_name;
+	}
+	public void Choice () {
+		System.out.println("Enter the number of your Choice:1-CheckPatient");
+		Scanner sc = new Scanner(System.in);
+			int Choice = sc.nextInt();
+			
+				switch (Choice) {
+				case 1: CheckPatient();
+					break;
+				case 2 : main(null);
+				
+				}
+		}	
+	
+	public void CheckPatient () {
+		Pet P = new Pet();
+		String P_name =P.getP_name();
+		int P_id = P.getP_id();
+		System.out.println("Doctor: "+D_name+" has checked pet "+P_name);
+
+	}
+}
